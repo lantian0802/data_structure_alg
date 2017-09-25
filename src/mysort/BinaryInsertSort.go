@@ -1,6 +1,8 @@
 package mysort
 import "fmt"
 
+// 时间复杂度 O(n) * O(lgn) = O(nlgn)
+// 空间复杂度 O(n)
 func binarySearch(input []int,item int,low int,high int) int {
 	if high <= low {
 		if item > input[low] {
