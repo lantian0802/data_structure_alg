@@ -1,4 +1,5 @@
 package mysort
+import "fmt"
 
 func binarySearch(input []int,item int,low int,high int) int {
 	if high <= low {
@@ -25,11 +26,14 @@ func BinaryInsertSort(input []int) []int {
 	for i:=1; i < len(input); i++ {
 		j := i-1
 		index := binarySearch(input,input[i],0,j)
+		item := input[i]
+		fmt.Printf("index:%v, input:%v \n",index,input)
 		for j >= index {
 			input[j+1] = input[j]
 			j--
 		}
-		input[index+1] = input[i]
+		input[j+1] = item
+		fmt.Printf("input[j+1]:%v,input[i]:%v,j=%v,i=%v \n",input[j+1],input[i],j,i)
 	}
 	return input
 }
