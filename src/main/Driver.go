@@ -2,10 +2,17 @@ package main
 
 import (
 	"fmt"
-	"mysort"
+	"leetcode"
+	//"strings"
 )
 
 func main() {
-	inputNumbers := []int{2, 3, 5, 8, 6, 9, 1}
-	fmt.Println(mysort.BinaryInsertSort(inputNumbers))
+	//s := "abcabcbb"
+	//leetcode.LengthOfLongestSubstring(s)
+	var array = []string{"aa", "a"}
+	//var array = []string{}
+	fmt.Println(leetcode.LongestCommonPrefix(array))
+	//var a = "aa"
+	//var b = "a"
+	//fmt.Println(strings.Index(a, b))
 }
