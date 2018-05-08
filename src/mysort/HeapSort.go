@@ -1,10 +1,12 @@
 package mysort
 
 func HeapSort(numList []int) []int {
+	//建堆
 	for i := len(numList)/2 - 1; i >= 0; i-- {
 		AdjustHeap(numList, i, len(numList)-1)
 	}
 
+	//堆排序
 	for j := len(numList) - 1; j >= 0; j-- {
 		temp := numList[0]
 		numList[0] = numList[j]
@@ -14,6 +16,7 @@ func HeapSort(numList []int) []int {
 	return numList
 }
 
+//调整堆
 func AdjustHeap(numList []int, head int, length int) {
 	temp := numList[head]
 	index := 0
